@@ -1,40 +1,40 @@
-#leaderboard-js
+# leaderboard-js
 A simple express-based app for storing and retrieving entries in a leaderboard.
 
-##Prerequisites
+## Prerequisites
 Requires [MongoDB](https://www.mongodb.com/) (Available through Homebrew: `brew install mongodb`).
 
-##Usage
+## Usage
 Make sure that you have a [MongoDB daemon](https://docs.mongodb.com/manual/reference/program/mongod/) running, which can be started with `mongod`.
 
-```bash
+```
 npm install leaderboard-js
 npm start
 ```
 
 **Note:** By default it will listen to port `3000`, but you can set the `PORT` environment variable to change this.
 
-###`GET : /`
+### `GET : /`
 Sending a `GET` request to the root will retrieve all entries from the database, sort them by score in descending order, and serve an HTML page displaying the *rank*, *name* and *score* of each entry.
 
 The page is declared as a [Pug](https://pugjs.org/) template at `/views/index.pug` and includes [Jquery](https://jquery.com/), [Tether](http://tether.io/) and [Bootstrap 4](https://v4-alpha.getbootstrap.com/). For styling it includes a CSS file which is built from the [Sass](http://sass-lang.com/) file at `sass/main.scss` using [node-sass-middleware](https://github.com/sass/node-sass-middleware).
 
-###`GET : /scores`
+### `GET : /scores`
 Retrieves all entries from the database and returns them as an array in the order that MongoDB returned them.
 
-###`POST : /scores`
+### `POST : /scores`
 Expects a body containing an object with the following properties:
 
-```JSON
+```
 {
-  "name": string (defaults to "Anonymous",
+  "name": string (defaults to "Anonymous"),
   "score": number (required),
   "timestamp": date (defaults to the time at which the request was processed.)
 }
 ```
 If the object was successfully stored it returns the MongoDB `_id` of the newly stored document.
 
-##License
+## License
 
 MIT License
 
