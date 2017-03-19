@@ -1,0 +1,20 @@
+{
+  "name": "leaderboard-js",
+  "version": "0.1.0",
+  "description": "A simple express-based app for storing and retrieving entries in a leaderboard.",
+  "repository": "https://github.com/goibon/leaderboard-js",
+  "bugs": "https://github.com/goibon/leaderboard-js/issues",
+  "scripts": {
+    "start": "node main.js",
+    "test": "standard"
+  },
+  "author": "Kasper Lind Sørensen",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.19",
+    "node-sass-middleware": "^0.10.1",
+    "pug": "^2.0.0-beta6"
+  }
+}
