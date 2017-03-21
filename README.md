@@ -7,7 +7,7 @@ Requires [MongoDB](https://www.mongodb.com/) (Available through Homebrew: `brew 
 ## Usage
 Make sure that you have a [MongoDB daemon](https://docs.mongodb.com/manual/reference/program/mongod/) running, which can be started with `mongod`.
 
-```
+```sh
 # optionally set environment variables PORT and MONGODB_PATH eg.
 # export PORT=3000
 npm start
@@ -30,7 +30,7 @@ Retrieves all entries from the database and returns them as an array in the orde
 ### `POST : /scores`
 Expects a body containing an object with the following properties:
 
-```
+```js
 {
   "name": string (defaults to "Anonymous"),
   "score": number (required),
