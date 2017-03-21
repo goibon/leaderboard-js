@@ -74,5 +74,5 @@ app.use(sass({
 app.use('/', express.static(path.join(__dirname, 'public')))
 app.set('view engine', 'pug')
 app.listen(PORT, function () {
-  console.log(`Example app listening on port ${PORT}!`)
+  console.log(`leaderboard-js app listening on port ${PORT}!`)
 })
