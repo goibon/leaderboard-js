@@ -8,7 +8,6 @@ Requires [MongoDB](https://www.mongodb.com/) (Available through Homebrew: `brew 
 Make sure that you have a [MongoDB daemon](https://docs.mongodb.com/manual/reference/program/mongod/) running, which can be started with `mongod`.
 
 ```
-npm install leaderboard-js
 npm start
 ```
 
