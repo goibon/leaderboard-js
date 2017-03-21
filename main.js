@@ -4,7 +4,9 @@ const path = require('path')
 const bodyParser = require('body-parser')
 const sass = require('node-sass-middleware')
 const PORT = process.env.PORT || 3000
-const db = require('./app/databaseHandler')()
+const MONGODB_PATH = process.env.MONGODB_PATH || 'mongodb://localhost:27017/leaderboard'
+
+const db = require('./app/databaseHandler')(MONGODB_PATH)
 
 // To support JSON-encoded bodies
 app.use(bodyParser.json())
