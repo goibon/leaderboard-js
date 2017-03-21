@@ -8,10 +8,16 @@ Requires [MongoDB](https://www.mongodb.com/) (Available through Homebrew: `brew 
 Make sure that you have a [MongoDB daemon](https://docs.mongodb.com/manual/reference/program/mongod/) running, which can be started with `mongod`.
 
 ```
+# optionally set environment variables PORT and MONGODB_PATH eg.
+# export PORT=3000
 npm start
 ```
+#### Supported environment variables
+`PORT`: The port that the server will listen to.
+Defaults to `3000`
 
-**Note:** By default it will listen to port `3000`, but you can set the `PORT` environment variable to change this.
+`MONGODB_PATH`: The path to the mongodb daemon that the server will attempt to connect to.
+Defaults to `mongodb://localhost:27017/leaderboard`.
 
 ### `GET : /`
 Sending a `GET` request to the root will retrieve all entries from the database, sort them by score in descending order, and serve an HTML page displaying the *rank*, *name* and *score* of each entry.
