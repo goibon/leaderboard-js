@@ -1,6 +1,6 @@
 {
   "name": "leaderboard-js",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A simple express-based app for storing and retrieving entries in a leaderboard.",
   "repository": "https://github.com/goibon/leaderboard-js",
   "bugs": "https://github.com/goibon/leaderboard-js/issues",
